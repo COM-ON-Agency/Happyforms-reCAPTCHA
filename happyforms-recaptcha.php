@@ -7,7 +7,7 @@
      * Version: 0.0.1-dev
      * Author: Com'On Agency
      * Author URI: https://www.com-on.agency/
-     * Text Domain: happyformsRecaptcha
+     * Text Domain: happyforms-recaptcha
      * Domain Path: /i18n/languages/
      * Requires at least: 5.2
      * Requires PHP: 7.0
