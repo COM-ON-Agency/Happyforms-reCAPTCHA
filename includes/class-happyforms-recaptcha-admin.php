@@ -57,7 +57,6 @@
          */
         public static function register_settings_options() {
 
-            register_setting( 'hpr-settings', 'hpr_recaptcha_type' );
             register_setting( 'hpr-settings', 'hpr_recaptcha_sitekey' );
             register_setting( 'hpr-settings', 'hpr_recaptcha_secretkey' );
         }
