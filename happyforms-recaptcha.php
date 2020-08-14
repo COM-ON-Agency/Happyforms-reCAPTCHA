@@ -14,7 +14,7 @@
      * @package HappyForms_Recaptcha
      */
 
-	use HPR\HappyForms_Recaptcha;
+    use HPR\HappyForms_Recaptcha;
 
 	defined('ABSPATH') || exit;
 
@@ -22,7 +22,6 @@
     define('HPR_PLUGIN_DIR', dirname(HPR_PLUGIN_FILE));
 
     require HPR_PLUGIN_DIR . '/vendor/autoload.php';
-    
 
     if(in_array('happyforms/happyforms.php', apply_filters('active_plugins', get_option('active_plugins'))) ||
         (is_multisite() && in_array('happyforms/happyforms.php', apply_filters('active_plugins', array_flip(get_site_option('active_sitewide_plugins')))))) {
