@@ -1,13 +1,17 @@
 <?php
 
+    namespace HPR;
+
+    use HPR\HappyForms_Recaptcha_Admin;
+
     /**
      * HappyForms Recaptcha plugin main class.
      *
      * Entry point of the plugin, declaration of main events, hooks,
      * actions, assets.
      *
-     * @package HappyForms-Recaptcha
-     * @author Com'On <thomas@com-on.agency>
+     * @package HPR
+     * @author COM'ON <thomas@com-on.agency>
      * @version 0.0.1-dev
      */
     class HappyForms_Recaptcha {
@@ -46,7 +50,10 @@
            if($need_recaptcha_in_page === FALSE)
                return;
 
-           $recaptcha_sitekey = get_option('hpr_recaptcha_sitekey');
+           $recaptcha_sitekey = get_option('hpr-recaptcha-sitekey');
+
+           if(empty($recaptcha_sitekey))
+           	    return;
 
            wp_enqueue_script('grecaptcha', 'https://www.google.com/recaptcha/api.js?render=' . $recaptcha_sitekey,
                 array(), false, true);
@@ -73,7 +80,11 @@
 
                 $session = happyforms_get_session();
 
-                $recaptcha_secret = get_option('hpr_recaptcha_secretkey');
+                $recaptcha_secret = get_option('hpr-recaptcha-secretkey');
+
+                if(empty($recaptcha_secret))
+                	return $is_valid;
+
                 $recaptcha_response = $request['grecaptcha_token'];
 
                 $recaptcha = file_get_contents(self::GRECAPTCHA_SITE_VERIFY . '?secret=' . $recaptcha_secret . '&response=' . $recaptcha_response);

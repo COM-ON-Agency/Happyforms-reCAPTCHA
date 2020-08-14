@@ -1,0 +1,17 @@
+{
+    "name": "comon/happyforms-recaptcha",
+    "description": "Happyforms reCAPTCHA is a wordpress plugin allowing to add google reCAPTCHA V3 simply and for free to Happyforms.",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Thomas Delaporte",
+            "email": "thomas@com-on.agency"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "HPR\\": "includes/"
+        }
+    },
+    "require": {}
+}

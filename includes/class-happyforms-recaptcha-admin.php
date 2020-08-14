@@ -1,10 +1,12 @@
 <?php
 
+    namespace HPR;
+
     /**
      * Class that represents the dashboard.
      *
-     * @package HappyForms-Recaptcha
-     * @author Com'On <thomas@com-on.agency>
+     * @package HPR
+     * @author COM'ON <thomas@com-on.agency>
      * @version 0.0.1-dev
      */
     class HappyForms_Recaptcha_Admin {
@@ -30,8 +32,8 @@
 
             add_submenu_page(
                 'happyforms',
-                __( 'ReCAPTCHA', 'happyforms' ),
-                __( 'ReCAPTCHA', 'happyforms' ),
+                __( 'ReCAPTCHA Settings', 'happyforms-recaptcha' ),
+                __( 'ReCAPTCHA', 'happyforms-recaptcha' ),
                 apply_filters( 'happyforms_forms_page_capabilities', 'manage_options' ),
                 'hpr-settings',
                 array( __CLASS__, 'view_settings' ),
@@ -57,7 +59,7 @@
          */
         public static function register_settings_options() {
 
-            register_setting( 'hpr-settings', 'hpr_recaptcha_sitekey' );
-            register_setting( 'hpr-settings', 'hpr_recaptcha_secretkey' );
+            register_setting( 'hpr-settings', 'hpr-recaptcha-sitekey' );
+            register_setting( 'hpr-settings', 'hpr-recaptcha-secretkey' );
         }
     }

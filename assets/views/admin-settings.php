@@ -13,7 +13,7 @@
                 <th scope="row"><?php echo __('Site key', 'happyforms-recaptcha'); ?></th>
                 <td>
                     <input type="text" name="hpr_recaptcha_sitekey" class="regular-text"
-                           value="<?php echo esc_attr( get_option('hpr_recaptcha_sitekey') ); ?>" />
+                           value="<?php echo esc_attr( get_option('hpr-recaptcha-sitekey') ); ?>" />
                 </td>
             </tr>
 
@@ -21,7 +21,7 @@
                 <th scope="row"><?php echo __('Secret key', 'happyforms-recaptcha'); ?></th>
                 <td>
                     <input type="text" name="hpr_recaptcha_secretkey"  class="regular-text"
-                           value="<?php echo esc_attr( get_option('hpr_recaptcha_secretkey') ); ?>" />
+                           value="<?php echo esc_attr( get_option('hpr-recaptcha-secretkey') ); ?>" />
                 </td>
             </tr>
         </table>
